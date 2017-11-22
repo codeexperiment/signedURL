@@ -50,4 +50,4 @@ The Data server runs on port 8081
 The Data server fetches the public key from the Authority server at startup to verify all signatures from any incoming signedURL.
 
 ### Running the client
-The Data server makes an http request to the Authority server to fetch the public key and then creates the signedURL to send it to the Data server. 
+The client makes an http request to the Authority server to fetch the signature for the given dataset ID and then creates the signedURL to send it to the Data server for that specific dataset ID.
