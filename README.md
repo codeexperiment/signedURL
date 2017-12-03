@@ -1,8 +1,8 @@
-# signedURL
+# signed URL
 
-The full context of signedURLs is explained in [**what is a signedURL**](https://abstractprogramming.blogspot.com/2017/10/what-is-signedurl.html).
+The full context of signed URLs is explained in [**what is a signed URL**](https://abstractprogramming.blogspot.com/2017/10/what-is-signedurl.html).
 
-A signedURL is a regular URL + a signature which can be verified by the server servicing your request, i.e. http://myexampleserver.com/12314?sig=AF830D849.
+A signed URL is a regular URL + a signature which can be verified by the server servicing your request, i.e. http://myexampleserver.com/12314?sig=AF830D849.
 
 There are 3 actors:
   - Client
@@ -11,7 +11,7 @@ There are 3 actors:
 
 The client gets the signature from the Authority server and appends it to the URL as a query parameter. 
 
-The full formed URL (signedURL) is then sent to the Data server.
+The full formed URL (signed URL) is then sent to the Data server.
 
 The Data server then verifies the signature using the public key provided by the Authority server.
 
@@ -50,4 +50,4 @@ The Data server runs on port 8081
 The Data server fetches the public key from the Authority server at startup to verify all signatures from any incoming signedURL.
 
 ### Running the client
-The client makes an http request to the Authority server to fetch the signature for the given dataset ID and then creates the signedURL to send it to the Data server for that specific dataset ID.
+The client makes an http request to the Authority server to fetch the signature for the given dataset ID and then creates the signed URL to send it to the Data server for that specific dataset ID.
